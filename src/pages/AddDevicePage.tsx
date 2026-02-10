@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Wifi, Smartphone, CheckCircle2, Loader2, Signal } from 'lucide-react';
+import { ArrowLeft, Wifi, Smartphone, CheckCircle2, Signal } from 'lucide-react';
 
 const AddDevicePage: React.FC = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
-  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [, setSelectedType] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
 
   const startSetup = () => {

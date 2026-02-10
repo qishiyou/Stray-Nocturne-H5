@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Bell, Star, Info, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Bell, Star, Info, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const MessageCenterPage: React.FC = () => {

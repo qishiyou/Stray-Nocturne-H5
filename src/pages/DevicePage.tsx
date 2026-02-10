@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, MoreVertical, Info, RefreshCw, Power, Trash2, Volume2, Mic, Lightbulb, ChevronRight, Signal, Wifi, Battery, Box, X, AlertTriangle, Edit2, Music, UserCircle, CheckCircle2 } from 'lucide-react';
+import { Plus, MoreVertical, Info, RefreshCw, Power, Trash2, Mic, ChevronRight, Signal, Wifi, Battery, Box, X, AlertTriangle, Edit2, UserCircle, CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const DevicePage: React.FC = () => {
@@ -13,8 +13,6 @@ const DevicePage: React.FC = () => {
   const [otaStatus, setOtaStatus] = useState<'checking' | 'ready' | 'downloading' | 'installing' | 'success'>('checking');
   const [otaProgress, setOtaProgress] = useState(0);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
-
-  const [otaError, setOtaError] = useState<string | null>(null);
 
   // Edit form state
   const [editForm, setEditForm] = useState({
@@ -58,7 +56,7 @@ const DevicePage: React.FC = () => {
     }));
   };
 
-  const handleReboot = (id: number) => {
+  const handleReboot = (_id: number) => {
     setActionLoading('rebooting');
     setShowMenu(null);
     // 模拟重启
@@ -117,7 +115,6 @@ const DevicePage: React.FC = () => {
     setShowMenu(null);
     setOtaStatus('checking');
     setOtaProgress(0);
-    setOtaError(null);
 
     // 模拟检测更新
     setTimeout(() => {

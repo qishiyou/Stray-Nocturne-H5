@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Shield, Lock, Smartphone, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Shield, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const SecurityPage: React.FC = () => {

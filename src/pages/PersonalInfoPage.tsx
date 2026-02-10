@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const PersonalInfoPage: React.FC = () => {
   const navigate = useNavigate();
-  const [profile, setProfile] = useState({
+  const [profile] = useState({
     nickname: 'AI开发者',
     id: '88886666',
     gender: '男',
